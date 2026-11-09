@@ -1,0 +1,37 @@
+# Dependencies, generated assets and build products
+node_modules/
+dist/
+src/serverroot/src/wasm/bridge.wasm
+*.o
+*.obj
+src/server
+src/server.exe
+src/cache_tests/cache_tests
+src/cache_tests/cache_tests.exe
+target/
+
+# Local configuration, private data and logs
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.pem
+*.key
+*.log
+src/exam-service/data/
+src/data.txt
+data.txt
+
+# Local-only unreferenced image
+src/serverroot/cat.jpg
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.dSYM
+.vscode/
+.idea/

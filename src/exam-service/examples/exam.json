@@ -1,0 +1,34 @@
+{
+  "title": { "tr": "Temel yevmiye alıştırması", "en": "Basic journal exercise" },
+  "description": { "tr": "Kurgusal işlemler için hesap seçimi ve yevmiye kaydı.", "en": "Account selection and journal entry for fictional transactions." },
+  "difficulty": "easy",
+  "difficultyRating": 100,
+  "timeLimitSeconds": 300,
+  "questions": [
+    {
+      "id": "cash-account",
+      "type": "choice",
+      "points": 40,
+      "prompt": { "tr": "Nakit mevcudu hangi hesapta izlenir?", "en": "Which account tracks cash on hand?" },
+      "options": [
+        { "id": "cash", "text": { "tr": "100 Kasa", "en": "100 Cash" } },
+        { "id": "bank", "text": { "tr": "102 Bankalar", "en": "102 Banks" } }
+      ],
+      "answer": "cash"
+    },
+    {
+      "id": "cash-sale",
+      "type": "journal",
+      "points": 60,
+      "prompt": {
+        "tr": "1.000 TL + %20 KDV peşin satışın satış ve KDV kaydını oluştur. Maliyet kaydını hariç tut.",
+        "en": "Record a cash sale of TRY 1,000 plus 20% VAT. Exclude the cost-of-goods entry."
+      },
+      "answer": [
+        { "accountCode": "100", "side": "debit", "amount": "1200" },
+        { "accountCode": "600", "side": "credit", "amount": "1000" },
+        { "accountCode": "391", "side": "credit", "amount": "200" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "trinity",
+  "version": "0.1.0",
+  "description": "The Matrix client that needs a better tagline",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/build-wasm.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/build-wasm.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pretest": "node scripts/build-wasm.mjs",
+    "test": "node --test tests/companyRooms.test.mjs tests/keyBackup.test.mjs tests/ledger.test.mjs tests/wasm.test.mjs tests/cashSale.test.mjs tests/practiceRooms.test.mjs tests/examRules.test.mjs tests/examApi.test.mjs tests/answerFiles.test.mjs tests/filePicker.test.mjs tests/cryptoMarket.test.mjs tests/examAuthorFiles.test.mjs"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "exceljs": "^4.4.0",
+    "emoji-picker-element": "^1.29.1",
+    "matrix-js-sdk": "^41.0.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1",
+    "vite-plugin-wasm": "^3.5.0"
+  }
+}
